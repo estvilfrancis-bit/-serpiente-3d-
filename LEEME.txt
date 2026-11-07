@@ -1,0 +1,21 @@
+SERPIENTE 3D — MULTIJUGADOR COOPERATIVO
+
+Contenido: index.html (juego), servidor.py (salas) y requirements.txt.
+
+PARA PROBAR EN UNA COMPUTADORA
+1. Instala Python 3.9 o más reciente.
+2. En una terminal, entra en esta carpeta y escribe:
+   pip install -r requirements.txt
+   python servidor.py
+3. Abre http://localhost:8080 en el navegador.
+4. Elige un código de 4 a 12 letras o números y pulsa «Entrar a la sala».
+5. Abre otra pestaña con el mismo código para probar dos jugadores.
+
+PARA JUGAR CON AMIGOS EN OTROS LUGARES
+Es necesario alojar esta carpeta en un servidor público que ejecute Python y permita WebSockets. El servidor escucha en la variable PORT. Comparte la dirección HTTPS del servidor y el mismo código de sala. Abrir solo el HTML no conecta a los amigos. El servidor no está publicado con este paquete.
+
+EN LÍNEA
+Hasta 8 jugadores comparten arena, bolitas y jefes. Cada 20 bolitas recogidas por la sala aparece un jefe común. La vida, nivel y progreso son individuales; los jefes derrotados cuentan para los jugadores conectados. Los ataques del jefe y el daño a cada jugador se calculan por separado. 2v2 y 4vs4 siguen siendo modos contra computadora, no partidas online de equipos. El chat de voz aún no está implementado. Las salas son temporales y desaparecen cuando se desconecta el último jugador. No uses códigos fáciles si quieres mantener la sala privada.
+
+LIMITACIONES
+Prototipo para jugar entre amigos, sin cuentas, almacenamiento de salas, protección contra trampas ni servidor TURN. Es necesario probarlo en el servidor y los dispositivos finales antes de considerarlo listo para distribución.
